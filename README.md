@@ -1,6 +1,6 @@
 # A Ejabberd simple buildout #
 
-travis 
+[![Build Status](https://travis-ci.org/RedTurtle/deployments.buildout.ejabberd.png?branch=master)](https://travis-ci.org/RedTurtle/deployments.buildout.ejabberd)
 
 ## Introduction ##
 This is an excerpt of [collective.xmpp.buildout](https://github.com/collective/collective.xmpp.buildou) which provides a full stack of Ejabberd, Plone and Ngnix.
