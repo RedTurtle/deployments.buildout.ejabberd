@@ -1,9 +1,11 @@
-# A varnish 3 buildout #
+# A Ejabberd simple buildout #
 
-[TOC]
+travis 
 
 ## Introduction ##
-This is the a very basic buildout template to run ejabberd.
+This is an excerpt of `collective.xmpp.buildout`_ which privides a full stack of Ejabberd, Plone and Ngnix.
+The purpose of this very basic buildout instead is to run only the Ejabberd server, and make it available 
+as `deployments.buildout.production`_ component.
 
 ## I am feeling lucky! ##
 Lucky people read the documentation,
@@ -17,56 +19,26 @@ To start the buildout:
 ```bash
 python2.7 bootstrap.py &&  ./bin/buildout
 ```
-To launch varnish:
-```bash
-./bin/ejabberd
-```
+
 Installation on Debian/Ubuntu/etc.
 ==================================
 
-This buildout compiles Nginx and Ejabberd from source and to do this, you'll need
+This buildout compiles Ejabberd from source and to do this, you'll need
 the development files of their dependencies.
 
 This is what I needed to install on a fresh(ish) Ubuntu 12.04:
 
-    sudo apt-get install zlib1g-dev erlang libzip2 libzip-dev libbz2-dev libxml2-dev libxslt-dev libpcre3-dev libexpat1-dev libssl-dev 
+    sudo apt-get install zlib1g-dev erlang libzip2 libzip-dev libbz2-dev libxml2-dev libxslt-dev libpcre3-dev libexpat1-dev libssl-dev
 
-```
 
 ## FAQ ##
-### Q: How can I change the backend port? ####
-__A:__ In the file `buildout.cfg`, section `varnish`,
-modify the `backend-port` option,
-which defaults to:
-```config
-[varnish]
-...
-bind = 127.0.0.1:8099
-```
+### Q: How to set admin password ####
+__A:__ In your buildout folder, after running the buildout, you need to do the following:
 
-### Q: How can I change varnish port? ####
-__A:__ In the file `buildout.cfg`, section `varnish`,
-modify the `bind` option,
-which defaults to:
-```config
-[varnish]
-...
-bind = 127.0.0.1:8099
-```
+    ./bin/ejabberdctl register admin localhost your_password
 
-### Q: How can I change varnish telnet interface port? ####
-```config
-[varnish]
-...
-telnet = 127.0.0.1:8098
-```
+Test that you can access your ejabberd by logging to the admin interface (typically ``http://localhost:5280/admin``).
 
-### Q: How can I change the cache size? ####
-__A:__ In the file `buildout.cfg`, section `varnish`,
-modify the `cache-size` option,
-which defaults to:
-```config
-[varnish]
-...
-cache-size = 512M
-```
+
+.. _collective.xmpp.buildout: https://github.com/collective/collective.xmpp.buildout
+.. _ https://github.com/RedTurtle/deployments.buildout.production
