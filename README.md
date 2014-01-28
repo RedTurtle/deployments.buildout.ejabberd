@@ -3,9 +3,10 @@
 travis 
 
 ## Introduction ##
-This is an excerpt of `collective.xmpp.buildout`_ which privides a full stack of Ejabberd, Plone and Ngnix.
+This is an excerpt of [collective.xmpp.buildout](https://github.com/collective/collective.xmpp.buildou) which privides a full stack of Ejabberd, Plone and Ngnix.
 The purpose of this very basic buildout instead is to run only the Ejabberd server, and make it available 
-as `deployments.buildout.production`_ component.
+as [deployments.buildout.production](https://github.com/RedTurtle/deployments.buildout.production) component.
+
 
 ## I am feeling lucky! ##
 Lucky people read the documentation,
@@ -38,7 +39,3 @@ __A:__ In your buildout folder, after running the buildout, you need to do the f
     ./bin/ejabberdctl register admin localhost your_password
 
 Test that you can access your ejabberd by logging to the admin interface (typically ``http://localhost:5280/admin``).
-
-
-.. _collective.xmpp.buildout: https://github.com/collective/collective.xmpp.buildout
-.. _ https://github.com/RedTurtle/deployments.buildout.production
