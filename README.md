@@ -3,7 +3,7 @@
 travis 
 
 ## Introduction ##
-This is an excerpt of [collective.xmpp.buildout](https://github.com/collective/collective.xmpp.buildou) which privides a full stack of Ejabberd, Plone and Ngnix.
+This is an excerpt of [collective.xmpp.buildout](https://github.com/collective/collective.xmpp.buildou) which provides a full stack of Ejabberd, Plone and Ngnix.
 The purpose of this very basic buildout instead is to run only the Ejabberd server, and make it available 
 as [deployments.buildout.production](https://github.com/RedTurtle/deployments.buildout.production) component.
 
