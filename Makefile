@@ -3,6 +3,6 @@
 PATH := .:$(PATH)
 
 lucky:
-        ./.imfeelinglucky.sh
+	./.imfeelinglucky.sh
 
 all: lucky
