@@ -21,6 +21,11 @@ To start the buildout:
 python2.7 bootstrap.py &&  ./bin/buildout
 ```
 
+To launch Ejabberd:
+```bash
+./bin/ejabberd
+```
+
 Installation on Debian/Ubuntu/etc.
 ==================================
 
